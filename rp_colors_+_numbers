@@ -1,0 +1,24 @@
+import random
+
+colors = ["pink", "red", "yellow", "orange", "purple", "green", "blue"]
+
+newlist = []
+newlist2 = []
+newlist3 = []
+
+for color in colors:
+
+    newlist.append(color)
+    newlist2.append(random.randint(0,1024))
+    newlist3.append(random.choice(colors))
+
+final_list = list(zip(newlist, newlist2, newlist3))
+
+f = '{:<22}{:<13}{:<15}'   # format
+
+print("")
+print('background color      number       writing color')
+print("")
+
+for i in final_list:
+    print(f.format(*i))
